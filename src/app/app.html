@@ -12,7 +12,7 @@
 
       <hr />
 
-      <div class="form-box-content" *ngIf="!formSubmitted">
+      <div class="description messageDiv" *ngIf="!formSubmitted">
 
         <form [formGroup]="ofRecruitForm">
 
@@ -225,6 +225,18 @@
             <button type="button" class="btn-reset" (click)="clearFields()">Reset</button>
           </div>
         </form>
+      </div>
+      
+      <div class="form-box-content" *ngIf="formSubmitted && formSuccess">
+        <h3 style="margin-top:2em;text-align: center;">
+          Thank you for your submission!
+        </h3>
+      </div>
+
+      <div class="description messageDiv" *ngIf="formSubmitted && formFailed">
+        <h3 style="margin-top:2em;text-align: center;">
+          There has been an error!  Please try again or contact Only Flasks admins.
+        </h3>
       </div>
     </div>
   </div>

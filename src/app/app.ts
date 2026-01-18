@@ -18,6 +18,8 @@ export class App {
   //Form Variables
   ofRecruitForm!: FormGroup;
   formSubmitted: boolean = false;
+  formSuccess: boolean = false;
+  formFailed: boolean = false;
 
   roles: string[]= ["Tank", "Healer", "DPS"];
   classes: string[] = [];
@@ -68,6 +70,8 @@ export class App {
   }
 
   onSubmit(FormData: NgForm){
+    this.formSubmitted = true
+    this.formSuccess = true;
     if(this.ofRecruitForm.get("Alt1Role")?.value != "" && this.ofRecruitForm.get("Alt1Spec")?.value == ""){
       this.ofRecruitForm.get("Alt1Role")?.patchValue("");
     }
@@ -87,9 +91,13 @@ export class App {
     });
 
     this.httpSer.post(this.scriptUrl, body.toString(), { headers, responseType: 'text'}).subscribe({
-      next: () => {this.formSubmitted = true},
-      error: err => console.error(err)
+      next: () => {},
+      error: err => {
+        console.error(err);
+        this.formFailed = true;
+      }
     });
+    this.ref.detectChanges();
   }
 
   setClassDropdowns(mainValue: string, classValue: string)
