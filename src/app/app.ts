@@ -62,12 +62,19 @@ export class App {
       RecruitingHelp: [false],
       HOF: [false],
       StretchWeek: [false],
-      Splits: [false],
+      Optional: [false],
       Comments: ['']
     });  
   }
 
   onSubmit(FormData: NgForm){
+    if(this.ofRecruitForm.get("Alt1Role")?.value != "" && this.ofRecruitForm.get("Alt1Spec")?.value == ""){
+      this.ofRecruitForm.get("Alt1Role")?.patchValue("");
+    }
+    if(this.ofRecruitForm.get("Alt2Role")?.value != "" && this.ofRecruitForm.get("Alt2Spec")?.value == ""){
+      this.ofRecruitForm.get("Alt2Role")?.patchValue("");
+    }
+
     const payload = this.ofRecruitForm.getRawValue();
 
     this.httpSer.post(this.scriptUrl, payload).subscribe({
@@ -134,14 +141,12 @@ export class App {
   updateClassDropdownOptions(value: string): string[]
   {
     let returnObject;
-    console.log(roles);
     return roles?.[value as keyof typeof returnObject];
   }
 
   updateSpecDropdownOptions(roleValue:string, classValue:string)
   {
     let returnObject;
-    console.log(classes);
     return classes?.[classValue as keyof typeof returnObject]?.[roleValue as keyof typeof returnObject]
   }
 
@@ -166,7 +171,7 @@ export class App {
       RecruitingHelp: false,
       HOF: false,
       StretchWeek: false,
-      Splits: false,
+      Optional: false,
       Comments: ''  
     });
   }
