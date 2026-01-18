@@ -47,8 +47,7 @@ export class App {
 
   buildForm(){
     this.ofRecruitForm = this.fb.group({
-      PlayerName: ['', Validators.required],
-      DiscordName: [''],
+      DiscordName: ['', Validators.required],
       MainRole: ['', Validators.required],
       MainClass: [{value: '', disabled: true}, Validators.required],
       MainSpec: [{value: '', disabled: true}, Validators.required],
@@ -60,6 +59,7 @@ export class App {
       Alt2Spec: [{value: '', disabled: true}],
       Sales: [false],
       RecruitingHelp: [false],
+      Leadership: [false],
       HOF: [false],
       StretchWeek: [false],
       Optional: [false],

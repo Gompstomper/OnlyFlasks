@@ -19,15 +19,8 @@
           <h3><strong>Player Information</strong></h3>
 
           <div class="form-group">
-              <!-- Player Name -->
-              <label for="PlayerName" class="form-label">Player Name</label>
-              <input type="text" id="PlayerName" formControlName="PlayerName"  class="form-control"
-              placeholder="ex.Gosu..." >            
-          </div>
-
-          <div class="form-group">
-              <!-- Discord Name (Optional) -->
-              <label for="DiscordName" class="form-label">Discord Name (optional)</label>
+              <!-- Discord Name -->
+              <label for="DiscordName" class="form-label">Discord Name</label>
               <input type="text" id="DiscordName" formControlName="DiscordName"  class="form-control"
               placeholder="ex.Jay..." >            
           </div>
@@ -177,6 +170,14 @@
             </label>
           </div>
           
+          <!-- Leadership checkbox -->
+          <div class="question-box">
+            <label>
+              Are you interested in leadership?
+              <input class="checkbox-item" type="checkbox" formControlName="Leadership" />
+            </label>  
+          </div>
+
           <!-- Recruiting help checkbox -->
           <div class="question-box">
             <label>
