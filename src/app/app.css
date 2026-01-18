@@ -1,0 +1,284 @@
+.label.invalid {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .error {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .ng-valid[required], .ng-valid.required  {
+    border-left: 7px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 7px solid #a94442; /* red */
+  }
+
+  h3,
+  h4,
+  label,
+  p{
+    color: white;
+  }
+
+.question-box{
+    padding-bottom:10px;
+}
+
+.question-box-3{
+    display:flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+/* General Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    
+  }
+
+.form-item-button{
+    display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: flex-end;
+}
+  
+  /* Header Image */
+  .image-container img {
+    width: 100%; 
+    max-width: 1200px; 
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Form Description */
+  .form-description {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px; 
+  }
+  
+  /* .form-description p {
+    font-size: 1.2em;
+    color: #333;
+  } */
+  
+  /* Container for Image and Form side by side */
+  .image-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ensures items align to the top */
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Shirt Image */
+  .shirt-image-container {
+    flex: 0 0 50%; 
+    padding-right: 15px;
+    margin-left: 1px;
+  }
+  
+  .shirt-image-container img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #formTitle{
+    font-size: 24pt;
+  }
+  
+  /* Form Box*/
+  .form-box {
+    flex: 1;
+    max-width: 752px;
+    min-height: 550px; 
+    border: 1px solid #ccc;
+    padding: 20px 20px; 
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    box-sizing: border-box;
+  }
+  
+  /* Form Content Container */
+  .form-box-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+    /* Form Fields  */
+    .form-group {
+    margin-bottom: 14px; 
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+    /* Form Fields  */
+    .form-group-multiple {
+        margin-bottom: 14px; 
+        width: 100%;
+        display:flex;
+        box-sizing: border-box;
+    }
+
+    .form-item-multiple-2 {
+        width: 50%;
+    }
+
+    .form-item-multiple-3 {
+        width: 33%;
+    }
+  
+    .form-item-multiple-2 label,
+    .form-group label {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px; 
+    }
+
+.checkbox-item{
+    transform: scale(1.5);
+}
+  
+  .form-control {
+    width: 98%;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff; /* Light blue border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue glow effect */
+    outline: none;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 3px;
+    text-align: center;
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px; 
+    width: 100%;
+  }
+  
+  .btn, .btn-reset {
+    padding: 10px 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 80px;
+  }
+  
+  .btn:disabled, .btn-reset:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .btn-reset {
+    background-color: #fb0202;
+  }
+
+  textarea {
+  resize: vertical;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .image-form-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .shirt-image-container {
+      flex: 1 0 100%;
+      padding-right: 0;
+      margin-right: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .shirt-image-container img {
+      max-width: 350px;
+    }
+    
+    .form-description p {
+      font-size: 1em;
+    }
+    
+    .form-box {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px 10px; /* Adjusted padding for mobile */
+    }
+    
+    .form-control {
+      width: 100%;
+    }
+    
+    .button-container {
+      flex-direction: row;
+    }
+  }
+  .page-overlay-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1009;
+    
+    background: rgba(97, 180, 225, 0.5);
+  }
+  .bee-spinner {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 40%;
+    left: calc(50% - 10%);
+    z-index: 100;
+    margin-right: 200px;
+    background-repeat: no-repeat;
+    background-size: 97%;
+    animation: bouncing 2s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite
+      alternate both;
+  }
+
+  .description-header{
+    text-align: center;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+

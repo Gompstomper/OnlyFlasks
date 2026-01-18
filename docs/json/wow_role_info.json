@@ -1,0 +1,33 @@
+{
+    "Tank": [
+        "Death Knight",
+        "Demon Hunter",
+        "Druid",
+        "Monk",
+        "Paladin",
+        "Warrior"
+    ],
+    "DPS": [
+        "Death Knight",
+        "Deamon Hunter",
+        "Druid",
+        "Evoker",
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Paladin",
+        "Priest",
+        "Rogue",
+        "Shaman",
+        "Warlock",
+        "Warrior"
+    ],
+    "Healer": [
+        "Druid",
+        "Evoker",
+        "Monk",
+        "Paladin",
+        "Priest",
+        "Shaman"
+    ]
+}
