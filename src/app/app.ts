@@ -1,4 +1,4 @@
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
@@ -27,7 +27,7 @@ export class App {
   alt2Classes: string[] = [];
   alt2Specs: string[] = [];
 
-  private scriptUrl = "https://script.google.com/macros/s/AKfycbzoPqQjq72zxaC5kUgSh99KCKxHmaLZiWSh8-101JfVevHPVDYySA-URYWn6LAl7IwwGQ/exec";
+  private scriptUrl = "https://script.google.com/macros/s/AKfycbx7hsybKa9yS2vAawEAk7iU1Qq0NNEgRSl3NoM4CxER4lMx4acWqSP_SYKgAXaXDJbvKg/exec";
 
   constructor(
     private fb: FormBuilder, 
@@ -77,7 +77,16 @@ export class App {
 
     const payload = this.ofRecruitForm.getRawValue();
 
-    this.httpSer.post(this.scriptUrl, payload).subscribe({
+    const body = new URLSearchParams();
+    Object.entries(payload).forEach(([key, value]) => {
+      body.set(key, String(value));
+    });
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+
+    this.httpSer.post(this.scriptUrl, body.toString(), { headers, responseType: 'text'}).subscribe({
       next: () => {this.formSubmitted = true},
       error: err => console.error(err)
     });

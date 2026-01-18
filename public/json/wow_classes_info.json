@@ -1,10 +1,10 @@
 {
-    "Death Knight": {
+    "DeathKnight": {
         "Tank": ["Blood"],
         "DPS": ["Frost", "Unholy"]
 
     },
-    "Demon Hunter": {
+    "DemonHunter": {
         "Tank": ["Vengeance"],
         "DPS": ["Devourer", "Havoc"]
     },

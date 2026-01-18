@@ -1,15 +1,15 @@
 {
     "Tank": [
-        "Death Knight",
-        "Demon Hunter",
+        "DeathKnight",
+        "DemonHunter",
         "Druid",
         "Monk",
         "Paladin",
         "Warrior"
     ],
     "DPS": [
-        "Death Knight",
-        "Deamon Hunter",
+        "DeathKnight",
+        "DemonHunter",
         "Druid",
         "Evoker",
         "Hunter",
