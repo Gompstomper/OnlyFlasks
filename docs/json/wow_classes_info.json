@@ -9,7 +9,7 @@
         "DPS": ["Devourer", "Havoc"]
     },
     "Druid": {
-        "Tank": ["Guadian"],
+        "Tank": ["Guardian"],
         "DPS": ["Balance", "Feral"],
         "Healer": ["Restoration"]
     },
@@ -48,7 +48,7 @@
         "DPS": ["Affliction", "Demonology", "Destruction"]
     },
     "Warrior": {
-        "Tank": ["Proctection"],
+        "Tank": ["Protection"],
         "DPS": ["Arms", "Fury"]
     }
 }
